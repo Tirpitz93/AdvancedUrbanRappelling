@@ -1,20 +1,29 @@
 # Advanced Urban Rappelling
 
-Created by Duda w/ custom animations by Mcruppert
+Created by Tirpitz & Duda w/ custom animations by Mcruppert
 
 **Features:**
-
- - Rappel of anything that's more than 4-5m high. This includes buildings, cliff, towers, etc. Everything works as long a you can walk to an edge.
+ -Items:
+    - rappelling anchor
+    - Belay device
+    - Ropes
+    - TCX Force powered ascender device
+    
  - Fire while rappelling! You can switch between your rifle and pistol while rappelling.
  - Custom animations and sounds
  - Supports swinging side to side, pushing off wall, and climbing back to the top.
- - Supports rappelling AI units.
- - Can be installed as server-side only addon. However, clients without the addon won't be able to shoot while rappelling and won't see custom animations and sounds. Still looks great though!
+ - ~~Supports rappelling AI units.~~ Currently not functional with the new mechanics.
+ - ~~Can be installed as server-side only addon. However, clients without the addon won't be able to shoot while rappelling and won't see custom animations and sounds. Still looks great though!~~
  - SP and MP compatible.
 
 **Directions:**
 
-Walk to any edge that's 4-5m high. Using your action menu, either rappel yourself or your AI units.
+ - Place rappelling anchor.
+ - Prapare ropes.
+ - Place a rappelling point (near the top of the rappelling route).
+ - Tie in to the rappelling rope.
+ - you can also tie in from the other end of the rope
+ - once complete you can pick up the rappel point and pack up the rope again, the rappelling anchor cannot be reused.
 
 Once rappelling, here's what you can do:
 
@@ -30,43 +39,12 @@ Once rappelling, here's what you can do:
  - Climb back to top (move up rope to the top, and then use action menu)
  - Detach from rope (use action menu)
 
-There are a few ways to rappel AI units:
 
- - Option 1: With you AI units nearby, walk to an edge and press Rappel AI Units. All nearby AI in your group will rappel down 3 evenly spaced ropes.
- - Option 2: After you start rappelling, you can use the Rappel AI Units action. All AI near your rappel anchor point will rappel in the same position.
- - Option 3: After you finish rappelling, you can use the Rappel AI Units action. All AI near your last used rappel anchor point will rappel in the same position.
- 
 **Installation:**
 
- 1. Subscribe via steam: https://steamcommunity.com/sharedfiles/filedetails/?id=730310357 or download latest release from https://github.com/sethduda/AdvancedUrbanRappelling/releases
+ 1. Subscribe via steam: https://steamcommunity.com/sharedfiles/filedetails/?id=2378849207 or download latest release from https://github.com/Tirpitz93/AdvancedUrbanRappelling
  2. If installing this on a server, add the addon to the -serverMod command line option. It's required on the server side and is optional for clients. It's recommended to put the addon's key in your server's key directory so clients can optionally enable the addon. If clients have the addon enabled, they'll be able to shoot while rappelling and will have custom animations and sounds.
 
-**Notes for Mission Makers:**
-
-If you want to script AI to rappel, you can use the AUR_Rappel_Unit function. Place the unit next to the edge they should rappel.
-
-Then, via scripting (e.g. using trigger activation) call this function:
-
-```
-[UNIT] spawn AUR_Rappel_Unit;
-```
-
-Params: 
-UNIT = The unit that should rappel
-
-The unit will then rappel down the edge.
-
-If you want more control, you can use the optional parameters:
-
-```
-[UNIT, ROPE_LENGTH, ANCHOR_POSITION, RAPPEL_DIRECTION] spawn AUR_Rappel_Unit;
-```
-
-Params:
-
-ROPE_LENGTH = Rope length in meters (Optional, defaults to 1.3x height above ground)
-ANCHOR_POSITION = Position ASL where the rope should attach (Defaults to edge next to unit if not specified)
-RAPPEL_DIRECTION = Unit vector direction that the unit should jump off when starting rappelling (e.g away from the building). If the unit is facing the direction they should jump off, you can get this via the command vectorDir UNIT.
 
 **Not working on your server?**
 
@@ -87,6 +65,7 @@ setvariable.txt
 Add the following exclusions to the end of all lines starting with 4, 5, 6, or 7 if they contain "" (meaning applies to all values): 
 
 !"AUR_"
+!"TIRP_"
 
 setvariableval.txt 
 

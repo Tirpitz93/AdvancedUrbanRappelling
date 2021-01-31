@@ -1,0 +1,11 @@
+implement: http://www.actsafe.se/tactical
+
+Done fix walking while attached
+Done fix rope attach to anchor model
+
+Done add tie in option
+Done add option to reuse rope from either end
+add option to clear rope from top
+add max length according to inventory max rope length.
+add ace equipment actions
+Config a Rappel point object
