@@ -6,6 +6,7 @@ Created by Tirpitz & Duda w/ custom animations by Mcruppert
 
 
  -Items:
+ 
     - rappelling anchor
     - Belay device
     - Ropes
